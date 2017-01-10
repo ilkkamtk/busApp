@@ -16,5 +16,7 @@ export class MainComponent implements OnInit {
   title: string = 'My first angular2-google-maps project';
   lat: number = this.mapService.getCoordinates().lat;
   lng: number = this.mapService.getCoordinates().lng;
+  coordinates: any = this.mapService.getCoordinates();
+
 
 }
