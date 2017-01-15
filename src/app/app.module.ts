@@ -3,12 +3,12 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
-import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import {AppComponent} from './app.component';
 import {SettingsComponent} from './settings/settings.component';
 import {MainComponent} from './main/main.component';
 import {MapService} from "./map.service";
+import {ReittiopasService} from "./reittiopas.service";
 
 const routes = [
   {
@@ -36,12 +36,9 @@ const routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAXQjpyD9IZKRZoogfOPjkdYMN-pH0exnU'
-    }),
     RouterModule.forRoot(routes)
   ],
-  providers: [MapService],
+  providers: [MapService, ReittiopasService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
